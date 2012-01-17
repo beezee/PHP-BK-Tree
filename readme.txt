@@ -5,7 +5,7 @@ Basic usage:
     $terms = array('term1', 'term2', 'etc') //must be unique values only
     $tree = new bkTree(array_pop($terms));
     $tree->build($terms);
-    $r = $tree->query('term', 2) //term to find matches for, max levenshtein distance to search.
+    $r = $tree->query('term', 2) //term to find matches for, max levenshtein distance to accept as match.
     
     
 $r->matches will contain an array of any matches found based on the threshold passed to query();
