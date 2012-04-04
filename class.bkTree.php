@@ -29,7 +29,7 @@ class bkTree
 	$cd = levenshtein($this->term, $t);
 	if ( $cd <= $l and $cd > 0 ) $r->matches[] = $this->term;
 	if (!$d) $d = levenshtein($t, $this->term);
-	for($i=$d-$l; $i<=$d+l; $i++)
+	for($i=$d-$l; $i<=$d+$l; $i++)
 	{
 	    if (isset($this->members[$i])) $this->members[$i]->query($t, $l, $d, $r);
 	}
